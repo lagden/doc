@@ -1,0 +1,59 @@
+{
+  "name": "@tadashi/doc",
+  "version": "1.0.0",
+  "description": "Validate CPF/CNPJ.",
+  "main": "src/doc.js",
+  "type": "module",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "src"
+  ],
+  "author": "Thiago Lagden",
+  "license": "MIT",
+  "homepage": "https://github.com/lagden/doc#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lagden/doc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lagden/doc/issues"
+  },
+  "keywords": [
+    "cpf",
+    "cnpj",
+    "lib"
+  ],
+  "engines": {
+    "node": ">=14.16"
+  },
+  "scripts": {
+    "pretest": "xo",
+    "test": "c8 --reporter=text --reporter=lcov ava"
+  },
+  "devDependencies": {
+    "ava": "3.15.0",
+    "c8": "7.7.1",
+    "xo": "0.39.1"
+  },
+  "xo": {
+    "ignores": [
+      "bin/*"
+    ],
+    "envs": [
+      "node"
+    ],
+    "semicolon": false,
+    "rules": {
+      "camelcase": [
+        "error",
+        {
+          "properties": "never"
+        }
+      ],
+      "capitalized-comments": 0,
+      "unicorn/prevent-abbreviations": 0,
+      "promise/prefer-await-to-then": 0
+    }
+  }
+}
