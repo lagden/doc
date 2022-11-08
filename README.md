@@ -22,14 +22,14 @@ Validate CPF/CNPJ.
 ## Install
 
 ```
-$ npm i -S @tadashi/doc
+$ npm i @tadashi/doc
 ```
 
 
 ## API
 
 ```ts
-onlyNumber(c: string): array
+onlyNumber(c: string): Array<number>
 isCnpj(c: string): boolean
 isCpf(c: string): boolean
 ```

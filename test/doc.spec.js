@@ -1,14 +1,16 @@
-'use strict'
-
 import test from 'ava'
 import {
 	isCnpj,
 	isCpf,
-	onlyNumber
+	onlyNumber,
 } from '../src/doc.js'
 
 test('isCpf', t => {
 	t.true(isCpf('090.885.670-93'))
+})
+
+test('isCpf 000', t => {
+	t.true(isCpf('000.000.000-00'))
 })
 
 test('isCpf length', t => {
@@ -25,6 +27,10 @@ test('isCpf wrong B', t => {
 
 test('isCnpj', t => {
 	t.true(isCnpj('29.249.091/0001-85'))
+})
+
+test('isCnpj 000', t => {
+	t.true(isCnpj('00.000.000/000000'))
 })
 
 test('isCnpj length', t => {

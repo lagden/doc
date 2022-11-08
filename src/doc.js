@@ -1,11 +1,5 @@
-/* eslint curly: 0 */
 function _numbers(c) {
-	c = c.replace(/\D/g, '').split('')
-	for (const [idx, value] of c.entries()) {
-		c[idx] = Number(value)
-	}
-
-	return c
+	return [...c.replace(/\D/g, '')].map(Number)
 }
 
 function isCnpj(c) {
@@ -19,12 +13,12 @@ function isCnpj(c) {
 		return false
 	}
 
-	for (i = 0, n = 0; i < 12; n += c[i] * b[++i]) ;
+	for (i = 0, n = 0; i < 12; n += c[i] * b[++i]);
 	if (c[12] !== (((n %= 11) < 2) ? 0 : 11 - n)) {
 		return false
 	}
 
-	for (i = 0, n = 0; i <= 12; n += c[i] * b[i++]) ;
+	for (i = 0, n = 0; i <= 12; n += c[i] * b[i++]);
 	if (c[13] !== (((n %= 11) < 2) ? 0 : 11 - n)) {
 		return false
 	}
@@ -43,12 +37,12 @@ function isCpf(c) {
 		return false
 	}
 
-	for (s = 10, n = 0, i = 0; s >= 2; n += c[i++] * s--) ;
+	for (s = 10, n = 0, i = 0; s >= 2; n += c[i++] * s--);
 	if (c[9] !== (((n %= 11) < 2) ? 0 : 11 - n)) {
 		return false
 	}
 
-	for (s = 11, n = 0, i = 0; s >= 2; n += c[i++] * s--) ;
+	for (s = 11, n = 0, i = 0; s >= 2; n += c[i++] * s--);
 	if (c[10] !== (((n %= 11) < 2) ? 0 : 11 - n)) {
 		return false
 	}
@@ -59,5 +53,5 @@ function isCpf(c) {
 export {
 	isCnpj,
 	isCpf,
-	_numbers as onlyNumber
+	_numbers as onlyNumber,
 }

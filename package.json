@@ -32,9 +32,9 @@
     "test": "c8 --reporter=text --reporter=lcov ava"
   },
   "devDependencies": {
-    "ava": "3.15.0",
-    "c8": "7.7.1",
-    "xo": "0.39.1"
+    "ava": "5.0.1",
+    "c8": "7.12.0",
+    "xo": "0.52.4"
   },
   "xo": {
     "ignores": [
@@ -51,6 +51,7 @@
           "properties": "never"
         }
       ],
+      "curly": 0,
       "capitalized-comments": 0,
       "unicorn/prevent-abbreviations": 0,
       "promise/prefer-await-to-then": 0
