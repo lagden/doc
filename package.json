@@ -1,6 +1,6 @@
 {
   "name": "@tadashi/doc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Validate CPF/CNPJ.",
   "main": "src/doc.js",
   "type": "module",
